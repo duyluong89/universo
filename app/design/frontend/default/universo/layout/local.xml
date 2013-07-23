@@ -31,7 +31,18 @@
 			<remove name="top.search" />	
 		</reference>
 		<reference name="header">
-            <block type="core/template" name="aa" as="aa" template="catalogsearch/form.mini.phtml"/>
+			
+			<block type="cms/block" name="header_service"><action method="setBlockId"><block_id>header_service</block_id></action></block>
+            <block type="core/template" name="topSearch" as="topSearch" template="catalogsearch/form.mini.phtml"/>
+            <block type="checkout/cart_sidebar" name="mini_cart_top" as="mini_cart_top" template="checkout/cart/mini.cart.top.phtml"/>
         </reference>
+        <reference name="top.links">
+        	 <action method="removeLinkByUrl"><url helper="checkout/url/getCartUrl" /></action> 
+        	 <remove name="checkout_cart_link" />
+        	 <action method="removeLinkBlock"><blockName>wishlist_link</blockName></action>
+        </reference>
+        <reference name="footer">
+			<block type="newsletter/subscribe" name="footer.newsletter" template="newsletter/subscribe.phtml"/>
+		</reference>
 	</default>
 </layout>
