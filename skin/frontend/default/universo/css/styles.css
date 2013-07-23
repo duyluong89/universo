@@ -1807,10 +1807,11 @@ input.input-text.mini-search-text{width: 270px;height: 29px;padding: 0px;margin:
 #mini-cart .block-content{width: 76px;float: right;margin-right: 30px;margin-top: 15px;}
 #mini-cart .block-content .empty{color:#fff; font-size: 17.01px; font-weight: bold;}
 .custom-footer{background:#f1f1f1; height: 100px; width:100%; border-top:3px solid #88427a; border-bottom: 1px solid #88427a;}
-.custom-footer .content-custom-footer{width:980px; margin:0 auto; height:100px;}
-.news-letter{display: table;vertical-align: middle;height: 100px;}
+.custom-footer .content-custom-footer{width:980px; margin:0 auto; height:100px; display: table;}
+.news-letter{display: table;vertical-align: middle;height: 100px; float:left;}
 .footer-subscribe{background: url('../images/footer-newletter.png') no-repeat -2px 23px;width: 186px;display: table-cell;vertical-align: middle;
 padding-left: 65px;}
 .footer-subscribe label{color:#874179; font-size: 13px; font-weight: bold; margin-left:5px;}
 .button.btn-newletter{background:url('../images/btn-newletter.png') no-repeat; width:37px; height: 35px;}
 .footer-subscribe #newsletter{width: 145px;height: 25px;border: 1px solid #c1c1c1;border-radius: 5px 0px 0px 5px;border-right: none;margin-right: -4px;margin-top: 2px;}
+.footer-custom-social{display: table-cell;vertical-align: middle;text-align: left;}
