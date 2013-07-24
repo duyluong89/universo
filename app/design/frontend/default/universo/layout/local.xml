@@ -46,9 +46,30 @@
 			<block type="cms/block" name="footer-facebook"><action method="setBlockId"><block_id>footer-facebook</block_id></action></block>
 			<block type="cms/block" name="footer-twitter"><action method="setBlockId"><block_id>footer-twitter</block_id></action></block>
 			<block type="cms/block" name="footer-instagram"><action method="setBlockId"><block_id>footer-instagram</block_id></action></block>
+			<block type="cms/block" name="footer-institucional"><action method="setBlockId"><block_id>Institucional</block_id></action></block>
+			<block type="cms/block" name="footer-atendimento"><action method="setBlockId"><block_id>atendimento</block_id></action></block>
+			<block type="cms/block" name="footer-certificate"><action method="setBlockId"><block_id>certificate</block_id></action></block>
+			<block type="cms/block" name="footer-fanpage"><action method="setBlockId"><block_id>facebook</block_id></action></block>
+			<block type="cms/block" name="copy-right"><action method="setBlockId"><block_id>copy-right</block_id></action></block>
 		</reference>
 		 <reference name="left">
             <remove name="left.newsletter"/>
         </reference>
 	</default>
+	<catalog_category_default>
+		<reference name="root">
+			<action method="setTemplate"><template>page/2columns-left.phtml</template></action>
+			<remove name="breadcrumbs" />
+		</reference>
+		<reference name="left">
+			<remove name="catalog.leftnav" />
+			<remove name="left.permanent.callout" />
+		</reference>
+	</catalog_category_default>
+	
+	<catalog_product_view>
+	<reference name="root">
+		<action method="setTemplate"><template>page/1column.phtml</template></action>
+	</reference>
+	</catalog_product_view>
 </layout>
