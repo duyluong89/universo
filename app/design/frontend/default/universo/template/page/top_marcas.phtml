@@ -1,0 +1,52 @@
+<?php $tpm=$this->getLayout()->createBlock('cms/block')->setBlockId('top_marcas_top')->toHtml(); ?>  
+<?php
+$dom = new domDocument;
+$dom->loadHTML($tpm);
+$dom->preserveWhiteSpace = false;
+$images = $dom->getElementsByTagName('img');
+foreach ($images as $image) {
+    $img_block[]=$image->getAttribute('src');
+}
+$ftotalimg=count($img_block);
+?>
+        <?php
+if($ftotalimg):?>
+<div class="clr"></div>
+<div class="top_marcas">
+    
+<div class="top_marcas_imgs tm" style="min-height: 40px;">
+    
+    <a class="prev browse left"  id="btleftmarcas"></a>
+    <div class="scrollable" id="scrollable" style="width: 907px;margin-left: 0;">
+            <div class="items">
+                <?php $i=1;?>
+                <?php $j=1;
+                      $k=1;?>
+                    <div class="box1">
+                        <?php $count=1; ?>
+                            <?php  foreach($img_block as $productId) :?>
+                                          <?php  $k++; ?>
+                        <img src="<? echo $productId ?>" />
+<?php if($i%5==0 && $k<=$ftotalimg):
+             $j++;?>
+</div>
+<div class="box<?php echo $j; ?>"><?php endif;$i++;?>
+     <?php $count++?>
+ <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+    <a class="next browse right"  id="btrightmarcas"></a>
+<?php endif;?>
+  </div>  
+
+</div>
+<div class="clr"></div>
+<script src="http://cdn.jquerytools.org/1.2.7/full/jquery.tools.min.js"></script>
+<script type="text/javascript">
+jQuery.noConflict(); 
+jQuery(function($) {
+  // initialize scrollable
+  $(".scrollable").scrollable();
+});
+</script>

@@ -97,7 +97,7 @@ ul,ol         { list-style:none; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { background:#fff; padding:25px 30px; text-align:left; }
 .main-container { }
-.main { width:980px; margin:0 auto; min-height:400px; padding:25px 25px 80px;  text-align:left; }
+.main { width:980px; margin:0 auto; min-height:400px; padding:0px 25px 80px;  text-align:left; }
 
 /* Base Columns */
 .col-left { float:left; width:195px; padding:0 0 1px; }
@@ -597,9 +597,9 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Sidebar =============================================================================== */
 .block { border:1px solid #c4c1bc; margin:0 0 15px; }
-.block .block-title { background:url(../images/bkg_block-title.gif) 0 0 repeat-x; border-bottom:1px solid #ddd; padding:2px 9px; }
+.block .block-title { background:url(../images/block-title.png) 0 0 repeat-x;padding:2px 9px; height:43px; }
 .block .block-title strong { display:block; font:bold 12px/16px Arial, Helvetica, sans-serif; min-height:16px; padding:1px 0 1px; text-transform:uppercase; color:#e26703; }
-.block .block-title strong span {}
+.block .block-title strong span {line-height: 40px;font-weight: normal;text-transform: uppercase;color: #fff;font-size: 15px;}
 .block .block-title a { text-decoration:none !important; }
 .block .block-subtitle { margin:0; padding:5px 9px; font-size:1em; font-weight:bold; color:#0a263c; }
 .block .block-content { background:#f8f7f5; }
@@ -791,12 +791,13 @@ tr.summary-details-excluded { font-style:italic; }
 .category-products {}
 
 /* View Type: Grid */
-.products-grid { border-bottom:1px solid #d9ddd3; background:url(../images/bkg_grid.gif) 0 0 repeat; position:relative; }
+.products-grid { position:relative; }
 .products-grid.last { border-bottom:0; }
-.products-grid li.item { float:left; width:138px; padding:12px 10px 80px; }
-.products-grid .product-image { display:block; width:135px; height:135px; margin:0 0 10px; }
-.products-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:bold; font-size:13px; color:#203548; }
-.products-grid .product-name a { color:#203548; }
+.products-grid li.item { float:left; width:177px; padding:12px 5px 15px; border: 1px solid #fff;overflow: hidden;min-height: 270px;}
+.products-grid li.item:hover{border:1px solid #dad9d9;}
+.products-grid .product-image { display:block; width:155px; height:132px; margin:0 0 10px; }
+.products-grid .product-name { /*min-height:2.7em;*/ margin:0 0 5px; font-weight:normal; font-size:13px; color:#676767; }
+.products-grid .product-name a { color:#676767; text-decoration:none; font-size:14px; font-weight:normal;}
 .products-grid .price-box { margin:5px 0; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { position:absolute; bottom:12px; }
@@ -872,23 +873,23 @@ tr.summary-details-excluded { font-style:italic; }
 .price { white-space:nowrap !important; }
 
 .price-box { margin:5px 0; }
-.price-box .price { font-weight:bold; color:#c76200; }
+.price-box .price { font-weight:normal; color:#676767; }
 
 /* Regular price */
-.regular-price { color:#c76200; }
-.regular-price .price { font-weight:bold; font-size:13px; color:#c76200; }
+.regular-price { color:#676767; }
+.regular-price .price { font-weight:normal; font-size:13px; color:#676767; }
 .block .regular-price,
 .block .regular-price .price { color:#2f2f2f; }
 
 /* Old price */
 .old-price { margin:0; }
 .old-price .price-label { white-space:nowrap; color:#999; }
-.old-price .price { font-weight:bold; color:#c76200; text-decoration:line-through; }
+.old-price .price { font-weight:normal; color:#676767; text-decoration:line-through; }
 
 /* Special price */
 .special-price { margin:0; padding:3px 0; }
-.special-price .price-label { font-size:13px; font-weight:bold; white-space:nowrap; color:#cd5033; }
-.special-price .price { font-size:13px; font-weight:bold; color:#c76200; }
+.special-price .price-label { font-size:13px; font-weight:normal; white-space:nowrap; color:#676767; }
+.special-price .price { font-size:13px; font-weight:normal; color:#676767; }
 
 /* Minimal price (as low as) */
 .minimal-price { margin:0; }
@@ -901,12 +902,12 @@ tr.summary-details-excluded { font-style:italic; }
 /* Excluding tax */
 .price-excluding-tax { display:block; color:#999; }
 .price-excluding-tax .label { white-space:nowrap; color:#999; }
-.price-excluding-tax .price { font-size:13px; font-weight:normal; color:#c76200; }
+.price-excluding-tax .price { font-size:13px; font-weight:normal; color:#676767; }
 
 /* Including tax */
 .price-including-tax { display:block; color:#999; }
 .price-including-tax .label { white-space:nowrap; color:#999; }
-.price-including-tax .price { font-size:13px; font-weight:bold; color:#c76200; }
+.price-including-tax .price { font-size:13px; font-weight:bold; color:#676767; }
 
 /* Configured price */
 .configured-price { margin:0; }
@@ -1815,3 +1816,21 @@ padding-left: 65px;}
 .button.btn-newletter{background:url('../images/btn-newletter.png') no-repeat; width:37px; height: 35px;}
 .footer-subscribe #newsletter{width: 145px;height: 25px;border: 1px solid #c1c1c1;border-radius: 5px 0px 0px 5px;border-right: none;margin-right: -4px;margin-top: 2px;}
 .footer-custom-social{display: table-cell;vertical-align: middle;text-align: left;}
+.block-home-left{width:291px;line-height: 106px;}
+.block-home-right{width:689px; overflow:hidden;}
+.top_marcas_imgs {padding-top: 8px;padding-bottom: 8px;width: 980px;}
+.clr{clear:both;}
+.top_marcas {float: left;margin-top: 10px;}
+.block-home{margin-top:2px;}
+#btleftmarcas {background: url(../images/top-marcas-prev.png) no-repeat;width: 21px;height: 48px;cursor: pointer;margin-top: 16px;}
+#btrightmarcas {background: url(../images/top-marcas-next.png) no-repeat;width: 22px;height: 48px;cursor: pointer;margin-top: 16px;}
+.cms-home .scrollable {position: relative;overflow: hidden;width: 895px;height: 92px;float: left;margin-left: 15px;}
+.scrollable .items {width: 20000em;position: absolute;}
+.items div {float: left;}
+.proto-controls .proto-control.forward{right:-39px;}
+.proto-controls .proto-control.forward a {background:url('../images/top-marcas-next.png') no-repeat;width: 22px;height: 48px;cursor: pointer;}
+.proto-controls .proto-control.backward{left:6px;}
+.proto-controls .proto-control.backward a{background:url('../images/top-marcas-prev.png') no-repeat;width: 21px;height: 48px;cursor: pointer;}
+.cms-home .block.block-category-nav{float:left; width:210px;}
+.cms-home .list-new-product{float:left; width:755px; margin-left:15px; border:none;}
+.products-grid .item span.amount{display:none;}
