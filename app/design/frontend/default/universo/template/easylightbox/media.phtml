@@ -37,14 +37,14 @@
 	        $maintitle  = $_product->getName();
 	endif;
 ?>
-
+<div class="images-box">
 <a href="<?php echo $image; ?>" 
     rel="lightbox[rotation]" 
     title="<?php echo $maintitle ;?>"
     onclick="return false;"
 ><img src="<?php echo $this->helper('catalog/image')->init($_product, 'image')->resize($mainImageSize[0], $mainImageSize[1]); ?>" alt="<?php echo $this->htmlEscape($_product->getImageLabel());?>"
 /></a>
-
+</div>
 
 <?php else: ?>
 
