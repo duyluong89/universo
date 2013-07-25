@@ -1,6 +1,6 @@
 /********************** Tabs */
 .product-view .tabs { margin: 15px 0px 0 0 ; overflow:hidden; zoom: 1;}
-.product-view .tabs li  { -moz-box-shadow: 2px 3px 8px #fafafa;-webkit-box-shadow: 2px 3px 8px #fafafa;box-shadow: 2px 3px 8px #fafafa;float:left; border-right:1px solid #ffffff; border-left:1px solid #fff; font-size:0.9em; line-height:1em;  background: #eeeeee; margin-right:10px; }
+.product-view .tabs li  { -moz-box-shadow: 2px 3px 8px #fafafa;-webkit-box-shadow: 2px 3px 8px #fafafa;box-shadow: 2px 3px 8px #fafafa	;float:left; border-right:1px solid #ffffff; border-left:1px solid #fff; font-size:0.9em; line-height:1em;  background: #eeeeee; margin-right:10px; }
 .product-view .tabs li.first          { border-left:0; }
 .product-view .tabs li.last           { border-right:0; }
 .product-view .tabs a                 { display:block; padding:11px 14px; font-size:16px; color:#444; text-decoration: none;}
