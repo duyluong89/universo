@@ -27,6 +27,13 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
+<div class="headerlinks">
+	<div class="top-headers">
+	<?php echo $this->getChildHtml('topLinks') ?>
+	<?php echo $this->getChildHtml('header-links') ?>
+
+	</div>
+</div>
 <div class="header-container">
     <div class="header">
         <?php if ($this->getIsHomePage()):?>

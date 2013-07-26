@@ -31,7 +31,7 @@
 			<remove name="top.search" />	
 		</reference>
 		<reference name="header">
-			
+			<block type="cms/block" name="header-links"><action method="setBlockId"><block_id>header-links</block_id></action></block>
 			<block type="cms/block" name="header_service"><action method="setBlockId"><block_id>header_service</block_id></action></block>
             <block type="core/template" name="topSearch" as="topSearch" template="catalogsearch/form.mini.phtml"/>
             <block type="checkout/cart_sidebar" name="mini_cart_top" as="mini_cart_top" template="checkout/cart/mini.cart.top.phtml"/>
