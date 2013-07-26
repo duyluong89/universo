@@ -73,7 +73,9 @@
 
 <?php if (count($this->getGalleryImages()) > 0): ?>
 <div class="more-views">
-    
+    <div id="liquid1" class="liquid">
+	<span class="previous"></span>
+	<div class="wrapper">
     <ul>
     <?php foreach ($this->getGalleryImages() as $_image): ?>
 	<?php
@@ -92,5 +94,15 @@
     </li>
     <?php endforeach; ?>
     </ul>
+	</div>
+	<span class="next"></span>
+</div>
 </div>
 <?php endif; ?>
+<script type="text/javascript">
+	<!--
+		jQuery(document).ready(function() {
+			jQuery('#liquid1').liquidcarousel();
+		});
+	-->
+	</script>

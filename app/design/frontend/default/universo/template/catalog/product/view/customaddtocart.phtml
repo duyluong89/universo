@@ -31,18 +31,27 @@
         <?php if(!$_product->isGrouped()): ?>
         <label for="qty" id="lblqty"><?php echo $this->__('Qty:') ?></label>
 		<div class="auto_incre">
-		<span class="remove"><a href="#"></a></span>
+		<span class="remove"><a href="#" onclick="diffqty('qty');"></a></span>
         <input type="text" name="qty" id="qty" maxlength="12" value="<?php echo $this->getProductDefaultQty() * 1 ?>" title="<?php echo $this->__('Qty') ?>" class="input-text qty custom-qty" />
-		<span class="add"><a href="#"></a></span>
+		<span class="add"><a href="#" onclick="addqty('qty')"></a></span>
         </div>
 		<?php endif; ?>
-        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"><span><span><?php echo $buttonTitle ?></span></span></button>
+        <button type="button" title="<?php echo $buttonTitle ?>" class="button btn-cart" onclick="productAddToCartForm.submit(this)"></button>
         <?php echo $this->getChildHtml('', true, true) ?>
     </div>
 <?php endif; ?>
 
 <script>
-jQuery(document).ready(function(){
-	
-});
+
+	function addqty(object){	
+		var qty = jQuery('input#' + object).val();
+		qty = parseInt(qty) + 1;
+		jQuery('input#' + object).val(qty);
+	}
+	function diffqty(object){
+	var qty = jQuery('input#' + object).val();
+		qty = parseInt(qty) - 1;
+		if(qty <=0) qty = 1;
+		jQuery('input#' + object).val(qty);	
+	}
 </script>
